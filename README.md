@@ -18,9 +18,16 @@ import React, { Component } from 'react'
 import MyComponent from 'react-pdf-preview'
 
 class Example extends Component {
+  const pdf = '' //base64 format
+  const [page,setPage] = React.useState(1)
+  
+  const onSuccessLoad = (data) => {
+  //pdf details
+  }
+
   render () {
     return (
-      <MyComponent />
+      <MyComponent pdf={pdf} pageNum={page} onLoad={onSuccessLoad} />
     )
   }
 }
