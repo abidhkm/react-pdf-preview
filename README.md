@@ -1,4 +1,4 @@
-# react-pdf-preview
+# react-pdf-previewer
 
 > display pdf in canvas
 
@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-pdf-preview
+npm install --save react-pdf-previewer
 ```
 
 ## Usage
