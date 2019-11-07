@@ -22,6 +22,10 @@ export default {
       sourcemap: true
     }
   ],
+  externals: [
+    'react',
+    'react-dom'
+  ],
   plugins: [
     external(),
     postcss({
