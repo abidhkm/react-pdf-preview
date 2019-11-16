@@ -15,7 +15,7 @@ npm install --save react-pdf-previewer
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-pdf-preview'
+import MyComponent from 'react-pdf-previewer'
 
 class Example extends Component {
   const pdf = '' //base64 format
