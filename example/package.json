@@ -6,8 +6,8 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
     "react-pdf-preview": "file:..",
     "react-scripts": "^1.1.4"
   },
