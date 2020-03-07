@@ -25,8 +25,7 @@ const Document = ({ pdf, onLoad, pageNum = 1, scale = 1 }) => {
       function() {
         if (!pdfjsLib) {
           pdfjsLib = window["pdfjs-dist/build/pdf"];
-          pdfjsLib.GlobalWorkerOptions.workerSrc =
-            "https://gitcdn.xyz/repo/mozilla/pdf.js/gh-pages/build/pdf.worker.js";
+          pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
         }
         setLibLoaded(true);
       }
