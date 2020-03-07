@@ -1,7 +1,7 @@
 {
   "name": "react-pdf-previewer",
-  "version": "1.0.1",
-  "description": "display pdf in canvas",
+  "version": "1.0.3",
+  "description": "helps to display pdf files.",
   "author": "abidhkm",
   "license": "MIT",
   "repository": "abidhkm/react-pdf-preview",

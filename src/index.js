@@ -22,10 +22,11 @@ const Document = ({ pdf, onLoad, pageNum = 1, scale = 1 }) => {
         async: null
       },
       "<div>innerHTML</div>",
-      function() {
+      function () {
         if (!pdfjsLib) {
           pdfjsLib = window["pdfjs-dist/build/pdf"];
-          pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+          pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "http://mozilla.github.io/pdf.js/build/pdf.worker.js";
         }
         setLibLoaded(true);
       }
@@ -43,10 +44,10 @@ const Document = ({ pdf, onLoad, pageNum = 1, scale = 1 }) => {
       {libLoaded ? (
         pdfV
       ) : (
-        <div className="loading">
-          <p className="loading_indicator">Loading...</p>
-        </div>
-      )}
+          <div className="loading">
+            <p className="loading_indicator">Loading...</p>
+          </div>
+        )}
     </div>
   );
 };
@@ -60,9 +61,9 @@ const PdfViewer = ({ pdf, pageNum, callback, scale }) => {
 
   const loadingTask = pdfjsLib.getDocument({ data: pdfData });
   loadingTask.promise.then(
-    function(pdf) {
+    function (pdf) {
       callback(pdf);
-      pdf.getPage(pageNum).then(function(_page) {
+      pdf.getPage(pageNum).then(function (_page) {
         const viewport = _page.getViewport({ scale });
         const canvas = renderCanvas.current;
         const context = canvas.getContext("2d");
@@ -73,10 +74,10 @@ const PdfViewer = ({ pdf, pageNum, callback, scale }) => {
           viewport
         };
         const renderTask = _page.render(renderContext);
-        renderTask.promise.then(function() {});
+        renderTask.promise.then(function () { });
       });
     },
-    function(reason) {
+    function (reason) {
       console.error(reason);
     }
   );
